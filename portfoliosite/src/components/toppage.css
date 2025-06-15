@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+html{
+    max-width: 960px;
+    margin-left:auto ;
+    margin-right: auto;
+    color: #878787;
+    background-color: #f7f1e1;
+    scroll-behavior: smooth;
+}
+
+.start img{
+	width: 100%;
+}
+
+body{
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans','Arial',sans-serif;
+}
+
+.link ul{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.link li{
+    display: inline;
+    list-style: none;
+    padding: 30px;
+}
+
+.link li a {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+.link li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 90%;
+    background-color: #0080ff;;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    transform: scale(0,1);
+    transition: 0.5s;
+}
+
+.link li a:hover {
+    color: #0080ff;;
+}
+
+.link li a:hover::after {
+    transform: scale(1,1);
+}
+
+.front{
+    position: relative;
+}
+
+.front p{
+    position: absolute;
+    font-family: sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+    border: white 5px solid;
+}
+
+.front img{
+    width: 100%;
+    opacity: 50%;
+}
+
+.aabout{
+    text-align: center;
+}
+
+.about p{
+    display: inline-grid;
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    color: #878787;
+    text-align: center;
+    align-content: center;
+    padding: 60px;
+}
+
+hr{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+textarea{
+    height: 200px;
+    width: 300px;
+}
+
+
+#page-top a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background:gray;
+	border-radius: 5px;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:0.6rem;
+	transition:all 0.3s;
+}
+
+#page-top a:hover{
+	background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+
+.zemi{
+    padding-bottom:10px ;
+}
+
+hr{
+    margin-top: 30px;
+}
+
+.hukyou{
+    display: flex;
+}
+
+.tube{
+    margin: 0 20px;
+}
